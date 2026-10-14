@@ -47,3 +47,12 @@ CASE   title / facts / cover film / lead / blocks (films, browser frame, phones,
 - My first instinct was near-black with a single neon red accent. That's a generic default. I **changed** it to true black, marble and oxblood used as whole fields, all taken from BD's own images.
 - My first instinct for the hero was a big headline with a stat row. I **changed** it to the human-to-statue lens, which only this client can have.
 - I **dropped** a loader and a custom cursor. The lens already is the cursor moment.
+
+---
+## v2 (2026-10-14): single long page, closer to landonorris.com
+The client asked for more of Lando's language and for the inner pages to go. What changed:
+- **Two-tone headlines.** Condensed uppercase sans over a light serif (Instrument Serif), as in Lando's "ALWAYS / *bringing the fight*". Every section opens this way.
+- **Notched shapes.** Collection and film cards use a frame with a cut corner around the label (Lando's helmet grid). Website panels have folder tabs. The footer panel has a raised bump.
+- **Footer.** Copied the structure of Lando's closing panel: a dark panel over an oxblood gradient, BD's red-profile portrait cut out and rising from the bottom, link columns either side, a brand marquee, and a signal-red "Business enquiries" pill.
+- **Accent.** Signal red `#E3262F` (from the red sunglasses and the profile backdrop) plays the role Lando's lime plays: pills, tags, year/meta labels.
+- **Reference modules, mapped to real content:** post carousel → Huayi social films; editorial carousel → sofa worlds; depth coverflow and 3D cylinder → collection overlays; WebGL bend strip → Light and Shadow; fanned cards → digital humans.

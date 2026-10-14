@@ -1,186 +1,100 @@
-// Site content. Edit text here, then run:  node tools/build.mjs
+// Site content for the single-page STUDIO|BD site. Edit, then run:  node tools/build.mjs
 // Media paths are relative to assets/media and have no extension.
-// Images: "folder/name" -> name.webp (+ name-s.webp). Videos: "folder/name" -> name.mp4 + name.jpg poster.
+//   Image "folder/name" -> folder/name.webp (+ folder/name-s.webp small version when it exists)
+//   Video "folder/name" -> folder/name.mp4 + folder/name.jpg poster
 
 export const site = {
   name: 'STUDIO|BD',
-  url: 'https://junnylai.github.io',                 // e.g. https://username.github.io/studio-bd  (used for og tags; optional)
+  url: 'https://junnylai.github.io',
   email: 'lai15914091693@gmail.com',
   handle: '@爆蛋BD',
   description: 'STUDIO|BD makes AI-native brand content: campaign imagery, product films, digital humans and brand websites.',
 };
 
-const WEB_ROLE = 'Brand design, visual direction, content selection and development. Led the team that produced the content.';
+const WEB_ROLE = 'Brand design, visual direction, content selection and development. I led the team that produced the content.';
 
-export const projects = [
+// Three brand websites, shown as stacked panels.
+export const websites = [
   {
-    slug: 'huayi-space',
-    title: 'Huayi Space',
-    type: 'Brand website and campaign',
-    short: 'Website, AI sofa campaign',
-    role: WEB_ROLE,
-    live: 'https://www.huayispace.vip/home/',
-    preview: 'huayi/sofa-07',
-    cover: { video: 'web/huayi', ratio: '16/10' , browser: 'huayispace.vip' },
-    lead: 'Huayi Space is a Shenzhen furniture house built on original design. I led its digital flagship from brand design to code, then built an AI campaign that takes one bouclé sofa out of the showroom and onto a sea cliff, into the desert and through raw concrete.',
+    id: 'huayi', name: 'Huayi Space', url: 'https://www.huayispace.vip/home/', domain: 'huayispace.vip',
+    kind: 'Brand website and AI campaign', role: WEB_ROLE,
+    video: 'web/huayi', phone: 'web/huayi-m2',
+    text: 'A Shenzhen furniture house built on original design. I led its digital flagship from brand identity to code, then extended it into AI campaigns and social films.',
     quote: 'Doing one thing to the extreme beats doing ten thousand things averagely.',
-    blocks: [
-      { k: 'shots', items: ['web/huayi-d2', 'web/huayi-d4', 'web/huayi-d6'] },
-      { k: 'phones', items: ['web/huayi-m1', 'web/huayi-m2', 'web/huayi-m3', 'web/huayi-m4'] },
-      { k: 'text', h: 'The sofa, anywhere', p: 'A single product held perfectly consistent across five worlds: the bouclé texture, the walnut trim and the cushion layout survive every scene. No set builds, no location shoots.' },
-      { k: 'full', src: 'huayi/sofa-08' },
-      { k: 'grid', cols: 3, items: ['huayi/sofa-07', 'huayi/sofa-09', 'huayi/sofa-12'] },
-      { k: 'grid', cols: 2, items: ['huayi/sofa-06', 'huayi/sofa-10'] },
-      { k: 'grid', cols: 3, items: ['huayi/sofa-01', 'huayi/sofa-02', 'huayi/sofa-03'] },
-      { k: 'grid', cols: 3, items: ['huayi/sofa-11', 'huayi/sofa-04', 'huayi/sofa-13'] },
-    ],
   },
   {
-    slug: 'gemrein',
-    title: 'Gemrein',
-    type: 'Brand website',
-    short: 'Brand launch website',
-    role: WEB_ROLE,
-    live: 'https://www.gemrein.com/',
-    preview: 'web/gemrein-d0',
-    cover: { video: 'web/gemrein', ratio: '16/10', browser: 'gemrein.com' },
-    lead: 'Gemrein is the independent design label of the Huayi group, relaunched in 2025 from huayi·mdn. The brief was a brand "with blue blood": elegant rebellion against the ordinary. The site opens in a palazzo with a single cobalt sofa and lets each room speak in full-screen scenes.',
+    id: 'gemrein', name: 'Gemrein', url: 'https://www.gemrein.com/', domain: 'gemrein.com',
+    kind: 'Brand launch website', role: WEB_ROLE,
+    video: 'web/gemrein', shot: 'web/gemrein-d4',
+    text: 'The independent design label of the Huayi group, relaunched in 2025. A brand "with blue blood": the site opens in a palazzo with a single cobalt sofa and lets each room speak full-screen.',
     quote: 'Elegant rebellion. The enemy of the ordinary.',
-    blocks: [
-      { k: 'grid', cols: 2, items: ['web/gemrein-d0', 'web/gemrein-d4'] },
-      { k: 'full', src: 'web/gemrein-d8' },
-    ],
   },
   {
-    slug: 'hothing',
-    title: 'Hothing',
-    type: 'Brand website',
-    short: 'Brand website',
-    role: WEB_ROLE,
-    live: 'https://www.hothing.vip/',
-    preview: 'web/hothing-d0',
-    cover: { video: 'web/hothing', ratio: '16/10', browser: 'hothing.vip' },
-    lead: 'Hothing is a furniture brand with its own independent design language. The site opens on a chrome figure in the dark before entering a catalogue of originals, the designers behind them and the craft that holds them together.',
-    blocks: [
-      { k: 'grid', cols: 2, items: ['web/hothing-d0', 'web/hothing-d2'] },
-      { k: 'grid', cols: 3, items: ['web/hothing-d4', 'web/hothing-d6', 'web/hothing-d8'] },
-      { k: 'phones', items: ['web/hothing-m1'] },
-    ],
-  },
-  {
-    slug: 'e8-film-study',
-    title: 'E8 film study',
-    type: 'Self-initiated film study',
-    short: 'Three AI car films',
-    role: 'Concept, direction, AI generation and edit',
-    year: '2026',
-    note: 'Self-initiated research using the GAC Trumpchi E8 PHEV as the subject. Not commissioned by GAC.',
-    preview: 'e8/exterior-01',
-    cover: { video: 'e8/exterior', ratio: '16/9', sound: true, caption: 'Exterior. Light signatures, wheels, lidar, the city.' },
-    lead: 'Can generated footage hold up to automotive-grade detail? Three short films around one MPV, covering exterior, interior and everyday life, test the light signatures, panel lines, leather grain and the people who use it.',
-    blocks: [
-      { k: 'video', src: 'e8/interior', ratio: '16/9', caption: 'Interior. Captain seats, ambient light, the cabin at dusk.', sound: true },
-      { k: 'video', src: 'e8/lifestyle', ratio: '16/9', caption: 'Lifestyle. A family, a city, a weekend.', sound: true },
-      { k: 'grid', cols: 3, items: ['e8/exterior-01', 'e8/interior-01', 'e8/lifestyle-01'] },
-    ],
-  },
-  {
-    slug: 'ride-at-dawn',
-    title: 'Ride at Dawn',
-    type: 'Self-initiated film',
-    short: 'Superbike film',
-    role: 'Concept, direction, AI generation and edit',
-    year: '2026',
-    preview: 'moto/cover-01',
-    cover: { video: 'moto/ride-at-dawn', ratio: '16/9', sound: true },
-    lead: 'A one-minute cinematic for a 500cc superbike: a red-lit garage, a storm over the mountains, an empty road. Rider, bike and weather stay consistent from the first boot splash to the final close-up.',
-    blocks: [
-      { k: 'single', src: 'moto/cover-01' },
-    ],
-  },
-  {
-    slug: 'fine-jewelry',
-    title: 'Fine jewelry',
-    type: 'Campaign imagery',
-    short: 'Four jewelry campaigns',
-    role: 'Art direction and AI image generation',
-    preview: 'jewelry/aquamarine-04',
-    cover: { image: 'jewelry/aquamarine-06' },
-    lead: 'Jewelry is the hardest test for generated imagery. Stones have to refract, metal has to reflect and hands have to look like hands. Four collections, each with its own cast and world.',
-    blocks: [
-      { k: 'text', h: 'Aquamarine flower ring', p: 'Bridal veils, a hyacinth macaw and red ribbon. The same six-petal ring in every frame.' },
-      { k: 'grid', cols: 3, items: ['jewelry/aquamarine-02', 'jewelry/aquamarine-04', 'jewelry/aquamarine-03'] },
-      { k: 'grid', cols: 2, items: ['jewelry/aquamarine-01', 'jewelry/aquamarine-05'] },
-      { k: 'text', h: 'MEREKI engraved band', p: 'One engraved band in gold, silver and rose gold, worn across four casts, from wireframe to finished campaign.' },
-      { k: 'grid', cols: 3, items: ['jewelry/mereki-01', 'jewelry/mereki-07', 'jewelry/mereki-10'] },
-      { k: 'grid', cols: 3, items: ['jewelry/mereki-08', 'jewelry/mereki-09', 'jewelry/mereki-04'] },
-      { k: 'text', h: 'Solitaire', p: 'A single diamond on velvet, rope, a rose and a calla lily, then on the hand.' },
-      { k: 'grid', cols: 3, items: ['jewelry/solitaire-01', 'jewelry/solitaire-04', 'jewelry/solitaire-06'] },
-      { k: 'text', h: 'Diamond rivière', p: 'Silver hair, a fur collar, and the necklace doing all the talking.' },
-      { k: 'grid', cols: 3, items: ['jewelry/diamond-01', 'jewelry/diamond-02', 'jewelry/diamond-03'] },
-    ],
-  },
-  {
-    slug: 'baodan',
-    title: 'BAODAN',
-    type: 'Studio brand',
-    short: 'House brand, five products',
-    role: 'Brand, packaging, art direction, films',
-    preview: 'baodan/honey-black-05',
-    cover: { image: 'baodan/honey-black-05' },
-    lead: 'BAODAN is my own test brand. One name, five products: black-gold honey, wildflower honey, protein oats, salmon cat food and a knitwear lookbook. Each has its own packaging, art direction and launch content, so new techniques get proven here before they reach a client.',
-    blocks: [
-      { k: 'text', h: 'Black-gold honey', p: 'A matte black jar with a gold hexagon window. Stills, macro details and three product loops.' },
-      { k: 'trio-video', items: ['baodan/honey-v1', 'baodan/honey-v2', 'baodan/honey-v3'], ratio: '3/4' },
-      { k: 'grid', cols: 3, items: ['baodan/honey-black-02', 'baodan/honey-black-08', 'baodan/honey-black-09'] },
-      { k: 'text', h: 'Salmon cat food', p: 'A full-orange key visual system and a short film about a cat with a secret plan.' },
-      { k: 'video', src: 'baodan/catfood', ratio: '16/9', caption: 'Launch film. 15 seconds.', sound: true },
-      { k: 'grid', cols: 3, items: ['baodan/catfood-01', 'baodan/catfood-03', 'baodan/catfood-05'] },
-      { k: 'text', h: 'Wildflower honey and protein oats', p: 'Two lighter, warmer worlds for the breakfast shelf.' },
-      { k: 'grid', cols: 3, items: ['baodan/honey-01', 'baodan/honey-04', 'baodan/oats-03'] },
-      { k: 'text', h: 'Knitwear lookbook', p: 'One model, seventeen looks, printed cats and dogs.' },
-      { k: 'grid', cols: 3, items: ['baodan/lookbook-01', 'baodan/lookbook-03', 'baodan/lookbook-05'] },
-    ],
-  },
-  {
-    slug: 'digital-humans',
-    title: 'Digital humans',
-    type: 'Character design',
-    short: 'Four consistent AI characters',
-    role: 'Character design and AI generation',
-    preview: 'digital-humans/designer-05',
-    cover: { image: 'digital-humans/designer-06' },
-    lead: 'A brand face only works if it is the same face every time. Four AI characters, each held across dozens of scenes, outfits and camera angles.',
-    blocks: [
-      { k: 'text', h: 'The jewelry designer', p: 'A keynote, a sketching session, a red-carpet portrait and a Paris street. Still the same person.' },
-      { k: 'grid', cols: 3, items: ['digital-humans/designer-01', 'digital-humans/designer-03', 'digital-humans/designer-05'] },
-      { k: 'grid', cols: 3, items: ['digital-humans/designer-04', 'digital-humans/designer-07', 'digital-humans/designer-08'] },
-      { k: 'text', h: 'Three more faces', p: 'Red-tinted shades on grey, a platinum blonde on pink, and a burgundy uniform shot from every angle.' },
-      { k: 'grid', cols: 3, items: ['digital-humans/shades-01', 'digital-humans/pink-02', 'digital-humans/uniform-02'] },
-      { k: 'grid', cols: 3, items: ['digital-humans/shades-03', 'digital-humans/uniform-04', 'digital-humans/pink-03'] },
-    ],
-  },
-  {
-    slug: 'light-and-shadow',
-    title: 'Light and Shadow',
-    type: 'Editorial',
-    short: 'One look, twenty lighting setups',
-    role: 'Art direction and AI generation',
-    preview: 'light-shadow/ls-03',
-    cover: { image: 'light-shadow/ls-12' },
-    lead: 'One model, one pair of red sunglasses, twenty lighting setups. A study in how far light alone can carry a campaign: halos, laser grids, eclipses and neon.',
-    blocks: [
-      { k: 'pair-video', video: 'light-shadow/ls', ratio: '3/4', image: 'light-shadow/ls-13' },
-      { k: 'grid', cols: 3, items: ['light-shadow/ls-03', 'light-shadow/ls-07', 'light-shadow/ls-09'] },
-      { k: 'grid', cols: 3, items: ['light-shadow/ls-04', 'light-shadow/ls-11', 'light-shadow/ls-02'] },
-      { k: 'grid', cols: 3, items: ['light-shadow/ls-01', 'light-shadow/ls-05', 'light-shadow/ls-10'] },
-    ],
+    id: 'hothing', name: 'Hothing', url: 'https://www.hothing.vip/', domain: 'hothing.vip',
+    kind: 'Brand website', role: WEB_ROLE,
+    video: 'web/hothing', phone: 'web/hothing-m1',
+    text: 'A furniture brand with its own independent design language. The site moves from a chrome figure in the dark into a catalogue of originals, the designers behind them and their craft.',
   },
 ];
 
-export const lab = [
-  ['lab/glasses-01', 'Eyewear concept'], ['lab/lamp-05', 'Cordless lamp concept'], ['lab/santa-02', 'Christmas campaign concept'],
-  ['lab/glasses-04', 'Eyewear concept'], ['lab/lamp-02', 'Cordless lamp concept'], ['lab/glasses-06', 'Eyewear concept'],
-  ['lab/santa-01', 'Christmas campaign concept'], ['lab/glasses-02', 'Eyewear concept'], ['lab/lamp-04', 'Cordless lamp concept'],
-  ['lab/glasses-08', 'Eyewear concept'], ['lab/glasses-05', 'Eyewear concept'], ['lab/lamp-01', 'Cordless lamp concept'],
+// Huayi Space social films (post carousel).
+export const social = [
+  { video: 'social/huayi-01', title: 'Classic of Mountains and Seas', caption: 'An ink-dark myth told in silhouettes and firelight.', likes: '1,204' },
+  { video: 'social/huayi-02', title: 'Visitors of the grassland', caption: 'We are all visitors to this time, this place. A home pitched under the Mongolian sky.', likes: '986' },
+  { video: 'social/huayi-03', title: 'Wabi-sabi', caption: 'A sea cave, a sofa and the beauty of the imperfect.', likes: '1,532' },
+  { video: 'social/huayi-04', title: 'French Design Award, gold', caption: 'Celebrating the Hercules and Knot chairs. Chinese design, world quality.', likes: '2,087' },
+];
+
+// Huayi Space sofa campaign (editorial carousel).
+export const worlds = [
+  { src: 'huayi/sofa-07', title: ['Sea', 'cliff'] },
+  { src: 'huayi/sofa-10', title: ['Sunset', 'dunes'] },
+  { src: 'huayi/sofa-03', title: ['Raw', 'concrete'] },
+  { src: 'huayi/sofa-01', title: ['Blueprint', 'storm'] },
+  { src: 'huayi/sofa-11', title: ['Morning', 'room'] },
+  { src: 'huayi/sofa-05', title: ['Desert', 'walk'] },
+  { src: 'huayi/sofa-04', title: ['Striped', 'light'] },
+];
+
+// Films (cards that open a player with sound).
+export const films = [
+  { video: 'moto/ride-at-dawn', title: 'Ride at Dawn', tag: 'Superbike film', length: '1:01' },
+  { video: 'e8/exterior', title: 'E8 Exterior', tag: 'Film study', length: '0:30' },
+  { video: 'e8/interior', title: 'E8 Interior', tag: 'Film study', length: '0:40' },
+  { video: 'e8/lifestyle', title: 'E8 Lifestyle', tag: 'Film study', length: '1:12' },
+  { video: 'baodan/catfood', title: 'Salmon Cat Food', tag: 'BAODAN launch', length: '0:15' },
+];
+export const filmsNote = 'Ride at Dawn and the E8 films are self-initiated studies in automotive imagery. The E8 series uses the GAC Trumpchi E8 PHEV as its subject and was not commissioned by GAC.';
+
+// Collection grid: product cut-outs. Each opens a carousel of the campaign.
+const range = (folder, n) => Array.from({ length: n }, (_, i) => `${folder}/${String(i + 1).padStart(2, '0')}`);
+export const collection = [
+  { cut: 'cut/honey-black', name: 'Black Gold Honey', tag: 'BAODAN', mode: 'depth', items: range('g-honeyblack', 11), text: 'A matte black jar with a gold hexagon window. Studio brand.' },
+  { cut: 'cut/mereki', name: 'MEREKI Band', tag: 'Jewelry', mode: 'arc', items: range('g-mereki', 13), text: 'One engraved band in gold, silver and rose gold, across four casts.' },
+  { cut: 'cut/sofa', name: 'Bouclé Sofa', tag: 'Huayi Space', mode: 'depth', items: range('huayi/sofa', 13).map((s) => s.replace('/sofa/', '/sofa-')), text: 'One sofa, held perfectly consistent across sea cliffs, dunes and concrete.' },
+  { cut: 'cut/aquamarine', name: 'Aquamarine Bloom', tag: 'Jewelry', mode: 'arc', items: range('g-aqua', 13), text: 'Bridal veils, a hyacinth macaw and red ribbon. The same six-petal ring in every frame.' },
+  { cut: 'cut/eyewear', name: 'Amber Frames', tag: 'Eyewear', mode: 'depth', items: range('g-eyewear', 14), text: 'Amber acetate frames, from a library chair to a vintage blue coupé.' },
+  { cut: 'cut/catfood', name: 'Salmon Cat Food', tag: 'BAODAN', mode: 'depth', items: range('g-catfood', 10), text: 'A full-orange key visual system for a salmon recipe. Studio brand.' },
+  { cut: 'cut/solitaire', name: 'Solitaire', tag: 'Jewelry', mode: 'depth', items: range('g-solitaire', 9), text: 'A single diamond on velvet, rope, a rose and a calla lily, then on the hand.' },
+  { cut: 'cut/lamp', name: 'Cordless Lamp', tag: 'Concept', mode: 'arc', items: range('g-lamp', 12), text: 'Fluted brass and green glass, carried from room to room.' },
+  { cut: 'cut/honey-wild', name: 'Wildflower Honey', tag: 'BAODAN', mode: 'depth', items: range('g-honey', 8), text: 'Kraft paper, linen and a meadow full of bees. Studio brand.' },
+  { cut: 'cut/santa', name: 'Hip-hop Santa', tag: 'Christmas', mode: 'arc', items: range('g-santa', 7), text: 'Bubble gum, white shades and a reindeer with a scarf.' },
+  { cut: 'cut/oats', name: 'Protein Oats', tag: 'BAODAN', mode: 'depth', items: range('g-oats', 8), text: 'A breakfast pack in warm terracotta, mid-pour and mid-air. Studio brand.' },
+  { cut: 'cut/red-glasses', name: 'Red Frames', tag: 'Digital human', mode: 'arc', items: range('digital-humans/uniform', 6).map((s) => s.replace('/uniform/', '/uniform-')), text: 'A burgundy uniform and red frames, shot from every angle.' },
+];
+
+// Light and Shadow (bending WebGL strip).
+export const light = [
+  ['light-shadow/ls-13', 'Laser grid'], ['light-shadow/ls-03', 'Halo'], ['light-shadow/ls-07', 'Eclipse'], ['light-shadow/ls-04', 'Light speed'],
+  ['light-shadow/ls-02', 'Neon script'], ['light-shadow/ls-09', 'Sunset disc'], ['light-shadow/ls-12', 'Orbit'], ['light-shadow/ls-05', 'Rainbow'],
+  ['light-shadow/ls-10', 'Leap'], ['light-shadow/ls-08', 'Ring light'], ['light-shadow/ls-11', 'Yellow cut'], ['light-shadow/ls-01', 'Ember lens'],
+  ['light-shadow/ls-06', 'Spotlight'],
+];
+
+// Digital humans (fanned cards).
+export const faces = [
+  ['digital-humans/designer-05', 'The jewelry designer'], ['digital-humans/shades-01', 'Red lens'], ['digital-humans/pink-02', 'Pink room'],
+  ['digital-humans/uniform-02', 'Campus look'], ['digital-humans/designer-08', 'The jewelry designer'], ['digital-humans/shades-03', 'Red lens'],
+  ['digital-humans/designer-01', 'The jewelry designer'], ['digital-humans/pink-03', 'Pink room'], ['digital-humans/uniform-04', 'Campus look'],
+  ['digital-humans/designer-07', 'The jewelry designer'], ['digital-humans/shades-04', 'Red lens'],
 ];
