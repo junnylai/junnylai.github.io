@@ -3,7 +3,7 @@
 A static portfolio site with no framework and no build server. Open `index.html` locally with any static server, or deploy the folder as-is to GitHub Pages.
 
 ## Editing content
-The site is one long page. All text, image choices and section content live in **`tools/data.mjs`** (websites, social films, sofa worlds, films, collection, light, faces). After editing, regenerate:
+The site is one long page. All text, image choices and section content live in **`tools/data.mjs`** (websites, social films, sofa worlds, films, collection story deck, light, faces). After editing, regenerate:
 
 ```bash
 node tools/build.mjs

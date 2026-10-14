@@ -124,7 +124,7 @@
 
   /* ---------- Notched frames (Lando-style cut corner around the label) ---------- */
   function drawNotch(el) {
-    const svg = $('.notch', el), label = el.querySelector('.item__label, .film-card__label');
+    const svg = $('.notch', el), label = el.querySelector('.film-card__label');
     if (!svg || !label) return;
     const W = el.clientWidth, H = el.clientHeight, r = 14, n = 40, s = 30, lw = label.offsetWidth + 40;
     const x1 = W - lw, y1 = H - n;
@@ -134,7 +134,7 @@
       `H ${x1}`, `C ${x1 - s * .5} ${y1} ${x1 - s * .5} ${H - .5} ${x1 - s} ${H - .5}`,
       `H ${r}`, `Q .5 ${H - .5} .5 ${H - r}`, `V ${r}`, `Q .5 .5 ${r} .5`, 'Z'].join(' '));
   }
-  const notched = $$('.item, .film-card');
+  const notched = $$('.film-card');
   const ro = new ResizeObserver((es) => es.forEach((e) => drawNotch(e.target)));
   notched.forEach((el) => ro.observe(el));
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => notched.forEach(drawNotch));
@@ -346,8 +346,110 @@
     const prevB = $('.ov__ctrl [data-prev]', ov), nextB = $('.ov__ctrl [data-next]', ov);
     prevB.addEventListener('click', () => car && car.prev()); nextB.addEventListener('click', () => car && car.next());
     $('.ov__close', ov).addEventListener('click', close);
-    $$('[data-coll]').forEach((b) => b.addEventListener('click', () => open(+b.dataset.coll, b)));
+    window.__openColl = open;
     addEventListener('resize', () => { if (!ov.hidden && car) car.render(); });
+  }
+
+
+  /* ---------- Collection: story deck you can throw ---------- */
+  const deck = $('[data-deck]');
+  if (deck) {
+    const coll = JSON.parse($('#coll-data').textContent);
+    const cards = $$('.deck__card', deck), n = cards.length;
+    const stack = $('.deck__stack', deck), text = $('.deck__text', deck), ring = $('.deck__ring .p', deck);
+    const curEl = $('[data-cur]', deck), ghost = $('.deck__ghost img', deck), pauseBtn = $('.deck__pause', deck);
+    const DUR = 6, C = 163.4;
+    let top = 0, busy = false, auto = null, paused = reduce, inView = false, hovering = false;
+    // Deck order: index in stack (0 = top). Fanned like loose prints.
+    const pose = (k) => ({ x: k * 16, y: -k * 4, rotate: k === 0 ? 0 : (k % 2 ? 4.5 : -3) + k * 1.6, scale: 1 - k * 0.045, '--dim': Math.min(k * 0.18, 0.55) });
+    const layout = (instant) => cards.forEach((c, i) => {
+      const k = mod(i - top, n);
+      c.style.zIndex = 100 - k;
+      c.tabIndex = k === 0 ? 0 : -1; k === 0 ? c.removeAttribute('aria-hidden') : c.setAttribute('aria-hidden', 'true');
+      gsap.to(c, { ...pose(Math.min(k, 3)), autoAlpha: k > 3 ? 0 : 1, duration: instant || reduce ? 0 : 0.7, ease: 'expo.out', overwrite: 'auto' });
+    });
+    const setText = (dir) => {
+      const d = coll[top];
+      const swap = () => {
+        $('.deck__title', text).textContent = d.name; $('.deck__lead', text).textContent = d.text;
+        $('.deck__who b', text).textContent = d.tag; $('.deck__who small', text).textContent = d.items.length + ' images';
+        $('.deck__avatar', text).src = d.cover; ghost.src = coll[mod(top + 1, n)].cover;
+        curEl.textContent = String(top + 1).padStart(2, '0');
+      };
+      if (reduce) return swap();
+      gsap.timeline()
+        .to(text, { autoAlpha: 0, x: -24 * dir, duration: 0.25, ease: 'power2.in' })
+        .add(swap)
+        .fromTo(text, { x: 32 * dir }, { autoAlpha: 1, x: 0, duration: 0.6, ease: 'expo.out' });
+    };
+    // Fling the top card off in direction dir (1 = next), then it rejoins the bottom of the deck.
+    const advance = (dir = 1, fromDrag) => {
+      if (busy) return; busy = true; restartRing();
+      const out = dir > 0 ? cards[top] : cards[mod(top - 1, n)];
+      if (dir > 0) {
+        top = mod(top + 1, n);
+        const vx = fromDrag ? fromDrag.vx : 1;
+        gsap.timeline({ onComplete: () => { busy = false; } })
+          .to(out, { x: (vx >= 0 ? 1 : -1) * (stack.offsetWidth * 1.5), y: fromDrag ? fromDrag.y - 60 : -80, rotate: (vx >= 0 ? 1 : -1) * 28, duration: reduce ? 0 : 0.45, ease: 'power2.in' })
+          .add(() => { out.style.zIndex = 0; layout(); }, reduce ? 0 : 0.18)
+          .set(out, { autoAlpha: 0 }, reduce ? 0 : 0.45)
+          .add(() => layout(), reduce ? 0 : 0.5);
+      } else {
+        top = mod(top - 1, n);
+        out.style.zIndex = 101;
+        gsap.timeline({ onComplete: () => { busy = false; } })
+          .fromTo(out, { x: -stack.offsetWidth * 1.4, y: -60, rotate: -24, autoAlpha: 1 }, { x: 0, y: 0, rotate: 0, scale: 1, '--dim': 0, duration: reduce ? 0 : 0.6, ease: 'expo.out' })
+          .add(() => layout(), 0);
+      }
+      setText(dir);
+    };
+    // Autoplay with a progress ring round the next button.
+    function restartRing() {
+      auto && auto.kill();
+      gsap.set(ring, { strokeDashoffset: C });
+      if (paused) return;
+      auto = gsap.to(ring, { strokeDashoffset: 0, duration: DUR, ease: 'none', paused: !inView || hovering, onComplete: () => advance(1) });
+    }
+    const sync = () => { if (auto) (inView && !hovering && !paused) ? auto.play() : auto.pause(); };
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; sync(); }, { threshold: 0.4 }).observe(deck);
+    deck.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') { hovering = true; sync(); } });
+    deck.addEventListener('pointerleave', () => { hovering = false; sync(); });
+    deck.addEventListener('focusin', (e) => { if (e.target.matches(':focus-visible')) { hovering = true; sync(); } });
+    deck.addEventListener('focusout', () => { hovering = false; sync(); });
+    pauseBtn.addEventListener('click', () => {
+      paused = !paused; pauseBtn.textContent = paused ? 'Play' : 'Pause'; pauseBtn.setAttribute('aria-pressed', String(paused)); restartRing();
+    });
+    if (reduce) { pauseBtn.textContent = 'Play'; pauseBtn.setAttribute('aria-pressed', 'true'); }
+    $('[data-next]', deck).addEventListener('click', () => advance(1));
+    $('[data-prev]', deck).addEventListener('click', () => advance(-1));
+    $('[data-open]', deck).addEventListener('click', (e) => window.__openColl && window.__openColl(top, e.currentTarget));
+    deck.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') { e.preventDefault(); advance(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); advance(-1); } });
+    // Drag the top card; throw it far or fast enough and it flies off.
+    let drag = null;
+    stack.addEventListener('pointerdown', (e) => {
+      const c = e.target.closest('.deck__card'); if (!c || +c.dataset.i !== top || busy || e.button !== 0) return;
+      drag = { c, x0: e.clientX, y0: e.clientY, lx: e.clientX, lt: performance.now(), vx: 0, moved: false, id: e.pointerId };
+    });
+    stack.addEventListener('pointermove', (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+      if (!drag.moved && Math.hypot(dx, dy) > 6) { drag.moved = true; stack.setPointerCapture(e.pointerId); auto && auto.pause(); }
+      if (!drag.moved) return;
+      const now = performance.now(); drag.vx = (e.clientX - drag.lx) / Math.max(1, now - drag.lt); drag.lx = e.clientX; drag.lt = now;
+      gsap.set(drag.c, { x: dx, y: dy * 0.4, rotate: dx * 0.06 });
+    });
+    const release = (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const d = drag; drag = null;
+      if (!d.moved) { window.__openColl && window.__openColl(top, d.c); return; }
+      const dx = e.clientX - d.x0;
+      if (Math.abs(dx) > stack.offsetWidth * 0.32 || Math.abs(d.vx) > 0.6) advance(1, { vx: dx, y: (e.clientY - d.y0) * 0.4 });
+      else { gsap.to(d.c, { x: 0, y: 0, rotate: 0, duration: 0.6, ease: 'elastic.out(1, .7)' }); sync(); }
+    };
+    stack.addEventListener('pointerup', release); stack.addEventListener('pointercancel', release);
+    cards.forEach((c) => c.addEventListener('click', (e) => e.preventDefault()));
+    cards.forEach((c) => c.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.__openColl && window.__openColl(top, c); } }));
+    layout(true); restartRing();
   }
 
   /* ---------- Light: WebGL strip that bends at the edges and ripples with speed ---------- */

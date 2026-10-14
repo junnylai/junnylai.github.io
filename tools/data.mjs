@@ -66,21 +66,21 @@ export const films = [
 ];
 export const filmsNote = 'Ride at Dawn and the E8 films are self-initiated studies in automotive imagery. The E8 series uses the GAC Trumpchi E8 PHEV as its subject and was not commissioned by GAC.';
 
-// Collection grid: product cut-outs. Each opens a carousel of the campaign.
+// Collection story deck: one card per campaign (cover image). Each opens a carousel of the campaign.
 const range = (folder, n) => Array.from({ length: n }, (_, i) => `${folder}/${String(i + 1).padStart(2, '0')}`);
 export const collection = [
-  { cut: 'cut/honey-black', name: 'Black Gold Honey', tag: 'BAODAN', mode: 'depth', items: range('g-honeyblack', 11), text: 'A matte black jar with a gold hexagon window. Studio brand.' },
-  { cut: 'cut/mereki', name: 'MEREKI Band', tag: 'Jewelry', mode: 'arc', items: range('g-mereki', 13), text: 'One engraved band in gold, silver and rose gold, across four casts.' },
-  { cut: 'cut/sofa', name: 'Bouclé Sofa', tag: 'Huayi Space', mode: 'depth', items: range('huayi/sofa', 13).map((s) => s.replace('/sofa/', '/sofa-')), text: 'One sofa, held perfectly consistent across sea cliffs, dunes and concrete.' },
-  { cut: 'cut/aquamarine', name: 'Aquamarine Bloom', tag: 'Jewelry', mode: 'arc', items: range('g-aqua', 13), text: 'Bridal veils, a hyacinth macaw and red ribbon. The same six-petal ring in every frame.' },
-  { cut: 'cut/eyewear', name: 'Amber Frames', tag: 'Eyewear', mode: 'depth', items: range('g-eyewear', 14), text: 'Amber acetate frames, from a library chair to a vintage blue coupé.' },
-  { cut: 'cut/catfood', name: 'Salmon Cat Food', tag: 'BAODAN', mode: 'depth', items: range('g-catfood', 10), text: 'A full-orange key visual system for a salmon recipe. Studio brand.' },
-  { cut: 'cut/solitaire', name: 'Solitaire', tag: 'Jewelry', mode: 'depth', items: range('g-solitaire', 9), text: 'A single diamond on velvet, rope, a rose and a calla lily, then on the hand.' },
-  { cut: 'cut/lamp', name: 'Cordless Lamp', tag: 'Concept', mode: 'arc', items: range('g-lamp', 12), text: 'Fluted brass and green glass, carried from room to room.' },
-  { cut: 'cut/honey-wild', name: 'Wildflower Honey', tag: 'BAODAN', mode: 'depth', items: range('g-honey', 8), text: 'Kraft paper, linen and a meadow full of bees. Studio brand.' },
-  { cut: 'cut/santa', name: 'Hip-hop Santa', tag: 'Christmas', mode: 'arc', items: range('g-santa', 7), text: 'Bubble gum, white shades and a reindeer with a scarf.' },
-  { cut: 'cut/oats', name: 'Protein Oats', tag: 'BAODAN', mode: 'depth', items: range('g-oats', 8), text: 'A breakfast pack in warm terracotta, mid-pour and mid-air. Studio brand.' },
-  { cut: 'cut/red-glasses', name: 'Red Frames', tag: 'Digital human', mode: 'arc', items: range('digital-humans/uniform', 6).map((s) => s.replace('/uniform/', '/uniform-')), text: 'A burgundy uniform and red frames, shot from every angle.' },
+  { cover: 'baodan/honey-black-05', name: 'Black Gold Honey', tag: 'BAODAN', mode: 'depth', items: range('g-honeyblack', 11), text: 'A matte black jar with a gold hexagon window. Studio brand.' },
+  { cover: 'jewelry/mereki-01', name: 'MEREKI Band', tag: 'Jewelry', mode: 'arc', items: range('g-mereki', 13), text: 'One engraved band in gold, silver and rose gold, across four casts.' },
+  { cover: 'huayi/sofa-07', name: 'Bouclé Sofa', tag: 'Huayi Space', mode: 'depth', items: range('huayi/sofa', 13).map((s) => s.replace('/sofa/', '/sofa-')), text: 'One sofa, held perfectly consistent across sea cliffs, dunes and concrete.' },
+  { cover: 'jewelry/aquamarine-06', name: 'Aquamarine Bloom', tag: 'Jewelry', mode: 'arc', items: range('g-aqua', 13), text: 'Bridal veils, a hyacinth macaw and red ribbon. The same six-petal ring in every frame.' },
+  { cover: 'lab/glasses-01', name: 'Amber Frames', tag: 'Eyewear', mode: 'depth', items: range('g-eyewear', 14), text: 'Amber acetate frames, from a library chair to a vintage blue coupé.' },
+  { cover: 'baodan/catfood-01', name: 'Salmon Cat Food', tag: 'BAODAN', mode: 'depth', items: range('g-catfood', 10), text: 'A full-orange key visual system for a salmon recipe. Studio brand.' },
+  { cover: 'jewelry/solitaire-04', name: 'Solitaire', tag: 'Jewelry', mode: 'depth', items: range('g-solitaire', 9), text: 'A single diamond on velvet, rope, a rose and a calla lily, then on the hand.' },
+  { cover: 'lab/lamp-05', name: 'Cordless Lamp', tag: 'Concept', mode: 'arc', items: range('g-lamp', 12), text: 'Fluted brass and green glass, carried from room to room.' },
+  { cover: 'baodan/honey-01', name: 'Wildflower Honey', tag: 'BAODAN', mode: 'depth', items: range('g-honey', 8), text: 'Kraft paper, linen and a meadow full of bees. Studio brand.' },
+  { cover: 'lab/santa-02', name: 'Hip-hop Santa', tag: 'Christmas', mode: 'arc', items: range('g-santa', 7), text: 'Bubble gum, white shades and a reindeer with a scarf.' },
+  { cover: 'baodan/oats-01', name: 'Protein Oats', tag: 'BAODAN', mode: 'depth', items: range('g-oats', 8), text: 'A breakfast pack in warm terracotta, mid-pour and mid-air. Studio brand.' },
+  { cover: 'digital-humans/uniform-02', name: 'Red Frames', tag: 'Digital human', mode: 'arc', items: range('digital-humans/uniform', 6).map((s) => s.replace('/uniform/', '/uniform-')), text: 'A burgundy uniform and red frames, shot from every angle.' },
 ];
 
 // Light and Shadow (bending WebGL strip).

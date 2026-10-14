@@ -174,17 +174,30 @@ const filmsSec = `<section class="films" id="films" data-nav="dark">
   <p class="films__note">${esc(filmsNote)}</p>
 </section>`;
 
+const pad = (k) => String(k).padStart(2, '0');
 const collSec = `<section class="coll" id="collection" data-nav="dark">
-  <div class="sec-head">${mix('The', 'collection.')}<p class="sec-head__p">Products I have rendered into whole campaigns. Open one to see it.</p></div>
-  <div class="coll__grid">
-    ${collection.map((c, i) => `<button class="item" type="button" data-coll="${i}">
-      ${notch}
-      <span class="item__img">${img(c.cut, { alt: '', sizes: '22vw' })}</span>
-      <span class="item__label"><b>${esc(c.name)}</b><em>${esc(c.tag)}</em></span>
-      <span class="sr">Open ${esc(c.name)}</span>
-    </button>`).join('\n')}
+  <div class="sec-head">${mix('The', 'collection.')}<p class="sec-head__p">Products I have rendered into whole campaigns. Throw the card to see the next one, or open a campaign to see every frame.</p></div>
+  <div class="deck" data-deck aria-roledescription="carousel" aria-label="Campaign collection">
+    <div class="deck__ghost" aria-hidden="true"><img src="${P}${collection[0].cover}-s.webp" alt=""></div>
+    <div class="deck__copy">
+      <p class="deck__count"><span data-cur>01</span> / ${pad(collection.length)}<span class="deck__rule" aria-hidden="true"></span></p>
+      <div class="deck__text" aria-live="off">
+        <h3 class="deck__title">${esc(collection[0].name)}</h3>
+        <p class="deck__lead">${esc(collection[0].text)}</p>
+        <p class="deck__who"><img class="deck__avatar" src="${P}${collection[0].cover}-s.webp" alt="" width="44" height="44"><span><b>${esc(collection[0].tag)}</b><small>${collection[0].items.length} images</small></span></p>
+      </div>
+      <div class="deck__ctrl">
+        <button class="ctrl__b" type="button" data-prev aria-label="Previous campaign">${icon.prev}</button>
+        <button class="ctrl__b deck__next" type="button" data-next aria-label="Next campaign"><svg class="deck__ring" viewBox="0 0 56 56" aria-hidden="true"><circle class="t" cx="28" cy="28" r="26"/><circle class="p" cx="28" cy="28" r="26"/></svg>${icon.next}</button>
+        <button class="pill pill--light deck__open" type="button" data-open>Open campaign</button>
+        <span class="deck__meta"><span class="deck__hint"><span aria-hidden="true">&#8592;&#8594;</span> Drag the card</span><button class="deck__pause" type="button" aria-pressed="false">Pause</button></span>
+      </div>
+    </div>
+    <div class="deck__stack">
+      ${collection.map((c, i) => `<button class="deck__card" type="button" data-i="${i}" aria-label="Open the ${esc(c.name)} campaign"${i ? ' tabindex="-1" aria-hidden="true"' : ''}>${img(c.cover, { alt: '', sizes: '(min-width: 900px) 30vw, 72vw', eager: false })}</button>`).join('\n      ')}
+    </div>
   </div>
-  <script type="application/json" id="coll-data">${JSON.stringify(collection.map((c) => ({ name: c.name, tag: c.tag, mode: c.mode, text: c.text, items: c.items.map((s) => { const [w, h] = size(s); return { s: P + s + (exists(s + '-s.webp') ? '-s' : '') + '.webp', l: P + s + '.webp', w, h }; }) })))}</script>
+  <script type="application/json" id="coll-data">${JSON.stringify(collection.map((c) => ({ name: c.name, tag: c.tag, mode: c.mode, text: c.text, cover: P + c.cover + '-s.webp', items: c.items.map((s) => { const [w, h] = size(s); return { s: P + s + (exists(s + '-s.webp') ? '-s' : '') + '.webp', l: P + s + '.webp', w, h }; }) })))}</script>
 </section>`;
 
 const lightSec = `<section class="light-sec" id="light" data-nav="dark">
