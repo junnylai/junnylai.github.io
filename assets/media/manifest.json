@@ -1,0 +1,770 @@
+{
+ "about": [
+  {
+   "file": "about/portrait-01.webp",
+   "w": 864,
+   "h": 1184,
+   "src": "Personal image assets/BD.png"
+  },
+  {
+   "file": "about/portrait-02.webp",
+   "w": 1800,
+   "h": 1344,
+   "src": "Personal image assets/BD01.jpg"
+  },
+  {
+   "file": "about/portrait-03.webp",
+   "w": 1800,
+   "h": 1344,
+   "src": "Personal image assets/BD02.jpg"
+  }
+ ],
+ "huayi": [
+  {
+   "file": "huayi/sofa-01.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Burst of Inspiration - Task 1_ Blueprint Explosion.png"
+  },
+  {
+   "file": "huayi/sofa-02.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Burst of Inspiration - Task 2_ Throwing Sketches.png"
+  },
+  {
+   "file": "huayi/sofa-03.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Concrete Architecture - Task 1_ Grand Concrete Space.png"
+  },
+  {
+   "file": "huayi/sofa-04.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Concrete Architecture - Task 2_ Shadow Stripes on Cushions.png"
+  },
+  {
+   "file": "huayi/sofa-05.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Desert Oasis - Task 2_ Designer Walking Away.png"
+  },
+  {
+   "file": "huayi/sofa-06.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Desert Oasis - Task 4_ Designer on Sofa.png"
+  },
+  {
+   "file": "huayi/sofa-07.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Image 17 (2).png"
+  },
+  {
+   "file": "huayi/sofa-08.webp",
+   "w": 1800,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Image 23 (1).png"
+  },
+  {
+   "file": "huayi/sofa-09.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Image 32 (1).png"
+  },
+  {
+   "file": "huayi/sofa-10.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/Image 6 (2).png"
+  },
+  {
+   "file": "huayi/sofa-11.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/The Morning Brew - Task 1_ Leaning Island.png"
+  },
+  {
+   "file": "huayi/sofa-12.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/图片节点 2 (30).png"
+  },
+  {
+   "file": "huayi/sofa-13.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/02/图片节点 4 (12).png"
+  }
+ ],
+ "e8": [
+  {
+   "file": "e8/exterior-01.webp",
+   "w": 1448,
+   "h": 1086,
+   "src": "Personal Portfolio Assets/Brand Video/外观篇/传祺E8-外观篇-都市质感-v2.png"
+  },
+  {
+   "file": "e8/interior-01.webp",
+   "w": 1448,
+   "h": 1086,
+   "src": "Personal Portfolio Assets/Brand Video/内饰篇/传祺E8-内饰篇-舒适质感-v2.png"
+  },
+  {
+   "file": "e8/lifestyle-01.webp",
+   "w": 1448,
+   "h": 1086,
+   "src": "Personal Portfolio Assets/Brand Video/生活篇/传祺E8-生活篇-城市陪伴-v2.png"
+  }
+ ],
+ "moto": [
+  {
+   "file": "moto/cover-01.webp",
+   "w": 1448,
+   "h": 1086,
+   "src": "Personal Portfolio Assets/Promotional Video/破晓而行-4比3封面.png"
+  }
+ ],
+ "jewelry": [
+  {
+   "file": "jewelry/mereki-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/ComfyUI_00110_.png"
+  },
+  {
+   "file": "jewelry/mereki-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/ComfyUI_00111_.png"
+  },
+  {
+   "file": "jewelry/mereki-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_4uaen44uaen44uae.png"
+  },
+  {
+   "file": "jewelry/mereki-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_5yppdf5yppdf5ypp.png"
+  },
+  {
+   "file": "jewelry/mereki-05.webp",
+   "w": 1800,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_ioeagsioeagsioea.png"
+  },
+  {
+   "file": "jewelry/mereki-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_jqprsbjqprsbjqpr.png"
+  },
+  {
+   "file": "jewelry/mereki-07.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_mys3pcmys3pcmys3.png"
+  },
+  {
+   "file": "jewelry/mereki-08.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_oakfuwoakfuwoakf.png"
+  },
+  {
+   "file": "jewelry/mereki-09.webp",
+   "w": 1303,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_x9c0f6x9c0f6x9c0.png"
+  },
+  {
+   "file": "jewelry/mereki-10.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/02/Gemini_Generated_Image_yrvnz8yrvnz8yrvn.png"
+  },
+  {
+   "file": "jewelry/aquamarine-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 52.png"
+  },
+  {
+   "file": "jewelry/aquamarine-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 55 (1).png"
+  },
+  {
+   "file": "jewelry/aquamarine-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 69 (1).png"
+  },
+  {
+   "file": "jewelry/aquamarine-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 75.png"
+  },
+  {
+   "file": "jewelry/aquamarine-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 80.png"
+  },
+  {
+   "file": "jewelry/aquamarine-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 91.png"
+  },
+  {
+   "file": "jewelry/aquamarine-07.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 94.png"
+  },
+  {
+   "file": "jewelry/aquamarine-08.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/05/图片 97.png"
+  },
+  {
+   "file": "jewelry/solitaire-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/04/图片 15 (1).png"
+  },
+  {
+   "file": "jewelry/solitaire-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/04/图片 23.png"
+  },
+  {
+   "file": "jewelry/solitaire-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/04/图片 24.png"
+  },
+  {
+   "file": "jewelry/solitaire-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/04/图片 34.png"
+  },
+  {
+   "file": "jewelry/solitaire-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/04/图片 37.png"
+  },
+  {
+   "file": "jewelry/solitaire-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/04/图片 40.png"
+  },
+  {
+   "file": "jewelry/diamond-01.webp",
+   "w": 1362,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/01/002.png"
+  },
+  {
+   "file": "jewelry/diamond-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/01/005.png"
+  },
+  {
+   "file": "jewelry/diamond-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/01/006.png"
+  }
+ ],
+ "baodan": [
+  {
+   "file": "baodan/honey-black-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/Grid_1_Hero_Still_Life.png"
+  },
+  {
+   "file": "baodan/honey-black-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/Grid_2_Macro_Detail.png"
+  },
+  {
+   "file": "baodan/honey-black-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/Grid_6_Sensory_Closeup.png"
+  },
+  {
+   "file": "baodan/honey-black-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/Grid_7_Color_Driven.png"
+  },
+  {
+   "file": "baodan/honey-black-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/Image 16.png"
+  },
+  {
+   "file": "baodan/honey-black-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/Image 17.png"
+  },
+  {
+   "file": "baodan/honey-black-07.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/_Image 1.png"
+  },
+  {
+   "file": "baodan/honey-black-08.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/_Image 3.png"
+  },
+  {
+   "file": "baodan/honey-black-09.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/03/_Image 4.png"
+  },
+  {
+   "file": "baodan/honey-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/02/1.png"
+  },
+  {
+   "file": "baodan/honey-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/02/2.png"
+  },
+  {
+   "file": "baodan/honey-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/02/3.png"
+  },
+  {
+   "file": "baodan/honey-04.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/02/8.png"
+  },
+  {
+   "file": "baodan/oats-01.webp",
+   "w": 1350,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/01/01.png"
+  },
+  {
+   "file": "baodan/oats-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/01/03.png"
+  },
+  {
+   "file": "baodan/oats-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/food/01/06.png"
+  },
+  {
+   "file": "baodan/catfood-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/pet/Gemini_Generated_Image_1u89wi1u89wi1u89.png"
+  },
+  {
+   "file": "baodan/catfood-02.webp",
+   "w": 895,
+   "h": 1200,
+   "src": "Personal Portfolio Assets/Image Vision/pet/Gemini_Generated_Image_3bhf883bhf883bhf.png"
+  },
+  {
+   "file": "baodan/catfood-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/pet/Gemini_Generated_Image_ae0gi8ae0gi8ae0g.png"
+  },
+  {
+   "file": "baodan/catfood-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/pet/Gemini_Generated_Image_gpf45agpf45agpf4.png"
+  },
+  {
+   "file": "baodan/catfood-05.webp",
+   "w": 1343,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/pet/Gemini_Generated_Image_u8164fu8164fu816.png"
+  },
+  {
+   "file": "baodan/lookbook-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/clothing/图片 24.png"
+  },
+  {
+   "file": "baodan/lookbook-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/clothing/图片 34.png"
+  },
+  {
+   "file": "baodan/lookbook-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/clothing/图片 36.png"
+  },
+  {
+   "file": "baodan/lookbook-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/clothing/图片 38.png"
+  },
+  {
+   "file": "baodan/lookbook-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/clothing/图片 39.png"
+  },
+  {
+   "file": "baodan/lookbook-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/clothing/图片 50.png"
+  }
+ ],
+ "digital-humans": [
+  {
+   "file": "digital-humans/designer-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/10.png"
+  },
+  {
+   "file": "digital-humans/designer-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/16.png"
+  },
+  {
+   "file": "digital-humans/designer-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/2.png"
+  },
+  {
+   "file": "digital-humans/designer-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/27.png"
+  },
+  {
+   "file": "digital-humans/designer-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/37.png"
+  },
+  {
+   "file": "digital-humans/designer-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/47.png"
+  },
+  {
+   "file": "digital-humans/designer-07.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/49.png"
+  },
+  {
+   "file": "digital-humans/designer-08.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/01/53.png"
+  },
+  {
+   "file": "digital-humans/shades-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/02/1.png"
+  },
+  {
+   "file": "digital-humans/shades-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/02/11.png"
+  },
+  {
+   "file": "digital-humans/shades-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/02/13.png"
+  },
+  {
+   "file": "digital-humans/shades-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/02/6.png"
+  },
+  {
+   "file": "digital-humans/pink-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/03/10.png"
+  },
+  {
+   "file": "digital-humans/pink-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/03/13.png"
+  },
+  {
+   "file": "digital-humans/pink-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/03/3.png"
+  },
+  {
+   "file": "digital-humans/pink-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/03/7.png"
+  },
+  {
+   "file": "digital-humans/uniform-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/04/1.png"
+  },
+  {
+   "file": "digital-humans/uniform-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/04/10.png"
+  },
+  {
+   "file": "digital-humans/uniform-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/04/15.png"
+  },
+  {
+   "file": "digital-humans/uniform-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/04/18.png"
+  },
+  {
+   "file": "digital-humans/uniform-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/04/21.png"
+  },
+  {
+   "file": "digital-humans/uniform-06.webp",
+   "w": 1800,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Digital Human Creation/04/32.png"
+  }
+ ],
+ "light-shadow": [
+  {
+   "file": "light-shadow/ls-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/1.png"
+  },
+  {
+   "file": "light-shadow/ls-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/13.png"
+  },
+  {
+   "file": "light-shadow/ls-03.webp",
+   "w": 1208,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/15.png"
+  },
+  {
+   "file": "light-shadow/ls-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/2.png"
+  },
+  {
+   "file": "light-shadow/ls-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/26.png"
+  },
+  {
+   "file": "light-shadow/ls-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/28.png"
+  },
+  {
+   "file": "light-shadow/ls-07.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/33.png"
+  },
+  {
+   "file": "light-shadow/ls-08.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/37.png"
+  },
+  {
+   "file": "light-shadow/ls-09.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/42.png"
+  },
+  {
+   "file": "light-shadow/ls-10.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/43.png"
+  },
+  {
+   "file": "light-shadow/ls-11.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/46.png"
+  },
+  {
+   "file": "light-shadow/ls-12.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/50.png"
+  },
+  {
+   "file": "light-shadow/ls-13.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Constructing with Light and Shadow/9.png"
+  }
+ ],
+ "lab": [
+  {
+   "file": "lab/glasses-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 10 (1).png"
+  },
+  {
+   "file": "lab/glasses-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 11 (1).png"
+  },
+  {
+   "file": "lab/glasses-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 13.png"
+  },
+  {
+   "file": "lab/glasses-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 2 (12).png"
+  },
+  {
+   "file": "lab/glasses-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 21 (3).png"
+  },
+  {
+   "file": "lab/glasses-06.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 5 (6).png"
+  },
+  {
+   "file": "lab/glasses-07.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 6 (11).png"
+  },
+  {
+   "file": "lab/glasses-08.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Glasses/图片节点 9 (6).png"
+  },
+  {
+   "file": "lab/lamp-01.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/01/图片节点 11 (2).png"
+  },
+  {
+   "file": "lab/lamp-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/01/图片节点 32.png"
+  },
+  {
+   "file": "lab/lamp-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/01/图片节点 33 (1).png"
+  },
+  {
+   "file": "lab/lamp-04.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/01/图片节点 8 (7).png"
+  },
+  {
+   "file": "lab/lamp-05.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Home & Living/01/图片节点 8 (9).png"
+  },
+  {
+   "file": "lab/santa-01.webp",
+   "w": 1314,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/03/001-13.png"
+  },
+  {
+   "file": "lab/santa-02.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/03/001-5.png"
+  },
+  {
+   "file": "lab/santa-03.webp",
+   "w": 1344,
+   "h": 1800,
+   "src": "Personal Portfolio Assets/Image Vision/Jewelry/03/001-7.png"
+  }
+ ]
+}
