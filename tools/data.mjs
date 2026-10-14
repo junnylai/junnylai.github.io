@@ -4,8 +4,8 @@
 
 export const site = {
   name: 'STUDIO|BD',
-  url: '',                 // e.g. https://username.github.io/studio-bd  (used for og tags; optional)
-  email: '',               // TODO: add contact email, e.g. 'hello@yourdomain.com'
+  url: 'https://junnylai.github.io',                 // e.g. https://username.github.io/studio-bd  (used for og tags; optional)
+  email: 'lai15914091693@gmail.com',
   handle: '@爆蛋BD',
   description: 'STUDIO|BD makes AI-native brand content: campaign imagery, product films, digital humans and brand websites.',
 };
